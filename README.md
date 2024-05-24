@@ -487,7 +487,7 @@ train_model(num_classes, train_dataloader, val_dataloader, test_dataloader, num_
    ```
    - 释放视频捕捉资源并关闭所有 OpenCV 窗口。
     
-### 效果请查看视频
+### 效果请查看result_video.mp4文件
     
 ### 至此整个项目结束。
 
