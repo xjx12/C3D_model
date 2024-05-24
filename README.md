@@ -13,7 +13,7 @@ tensorboard:2.7.0
 tqdm:4.62.3
 ## 项目开发前的准备
 ### (1).先简单介绍一下项目结构 
-<img src="[项目结构图.jpeg](https://github.com/xjx12/C3D_model/blob/3374bf42b4e579f312491a990c4e30a714a94285/%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84%E5%9B%BE.jpeg)">
+<img src="https://github.com/xjx12/C3D_model/blob/3374bf42b4e579f312491a990c4e30a714a94285/%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84%E5%9B%BE.jpeg">
 <p style="text-indent: 2em;">如项目结构图所示，接下来我简单介绍一下以避免在项目运行时因为路径的原因报错：</p>
 <p style="text-indent: 0em;">(1).C3D(根目录):存放项目文件的根目录</p>
 <p style="text-indent: 2em;">(2).data(数据集文件夹)：用于存放数据集</p>
