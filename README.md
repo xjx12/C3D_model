@@ -5,7 +5,7 @@ Implementation of C3D model based on UCF101 dataset
 Jupyter notebook:6.5.6   
 python:3.9.18  
 pytorch:2.1.2  
-CUDA:按自己的电脑配置安装（<font color="red">强烈建议安装CUDA使用GPU训练否则训练时间会很久，本人MacBookAir m1芯片GPU不支持3D卷积，用CPU训练15个epoch花费了30个小时</font>）
+CUDA:按自己的电脑配置安装（**强烈建议安装CUDA使用GPU训练否则训练时间会很久，本人MacBookAir m1芯片GPU不支持3D卷积，用CPU训练15个epoch花费了30个小时**）
 ### 额外需要的库：  
 opencv-python:4.5.4.60  
 tensorboardX:2.5.1  
@@ -18,13 +18,13 @@ tqdm:4.62.3
 <p style="text-indent: 0em;">(1).C3D(根目录):存放项目文件的根目录</p>
 <p style="text-indent: 2em;">(2).data(数据集文件夹)：用于存放数据集</p>
 <p style="text-indent: 4em;">(3).UCF101(原始数据集)：原始视频数据集，需要自行下载，下载地址：https://www.crcv.ucf.edu/research/data-sets/ucf101/</p>
-        <p style="text-indent: 4em;">(3).ucf101(图片数据集文件)：用于存放视频数据集处理后的图片数据集。(<font color="red">该文件夹需要自己先创建</font>)</p>
+        <p style="text-indent: 4em;">(3).ucf101(图片数据集文件)：用于存放视频数据集处理后的图片数据集。(**该文件夹需要自己先创建**)</p>
 <p style="text-indent: 6em;">(4).train(训练集文件夹)：用于存放训练数据(运行data_process.ipynb会自动生成,如果生成失败请自己创建)</p>
 <p style="text-indent: 6em;">(4).test(测试集文件夹)：用于存放测试数据(运行data_process.ipynb会自动生成,如果生成失败请自己创建)</p>
 <p style="text-indent: 6em;">(4).val(验证集文件夹)：用于存放验证数据(运行data_process.ipynb会自动生成,如果生成失败请自己创建)</p>
 <p style="text-indent: 4em;">(3).labels.txt(标签文件)：用于存放视频对应的标签（运行data_process.ipynb会自动生成）</p>
 <p style="text-indent: 4em;">(3).testvideo.avi(推理视频)：用于模型推理，也可以直接用原始数据集中的视频，需要注意模型推理时的推理视频路径</p>
-<p style="text-indent: 2em;">(2).model_resule(日志及训练模型保存文件夹)：用于存放训练日志以及保存训练好的模型以便在模型推测加载训练好的模型(<font color="red">该文件夹需要自己先创建</font>)</p>
+<p style="text-indent: 2em;">(2).model_resule(日志及训练模型保存文件夹)：用于存放训练日志以及保存训练好的模型以便在模型推测加载训练好的模型(**该文件夹需要自己先创建**)</p>
 <p style="text-indent: 4em;">(3).models(日志及训练模型保存文件夹)：用于存放训练日志以及保存训练好的模型以便在模型推测加载训练好的模型(运行train.ipynb文件自动生成)</p>
 <p style="text-indent: 2em;">(2).c3d-pretrained.pth(预训练权重文件)：用于模型训练时预加载的权重，可以让模型更快收敛以及防止过拟合。该文件需要自己下载，注意文件名的一致。</p>
 <p style="text-indent: 2em;">(2).C3D_model.py(C3D模型文件)：C3D模型。</p>
@@ -42,7 +42,7 @@ UCF101数据集链接:https://www.crcv.ucf.edu/research/data-sets/ucf101/
 
 如果不想训练只做推理可以使用下面提供的模型：
 链接: https://pan.baidu.com/s/1MWVp8xbcI2bxwfcgkmOXpg?pwd=0238 提取码: 0238  
-<font color="red">注意:模型文件.tar不需要解压，下载后放到对应位置即可</font>
+## 注意:模型文件.tar不需要解压，下载后放到对应位置即可
 ### (3)、按照项目结构图创建缺失的文件夹
 在该项目中需要创建2个文件夹，一个是ucf101，另一个是model_resule
 
@@ -279,8 +279,8 @@ writer.close()
   - 对输入数据进行前向传播，计算损失，反向传播并更新模型参数（仅在训练阶段）。
   - 记录并累加损失和正确预测的数量。
   - 每个 epoch 结束后，调整学习率并记录损失和准确率到 TensorBoard。  
-    <font color="red">查看损失和准确率请在该项目环境的命令行里使用以下命令:tensorboard --logdir 日志文件夹  
-        (日志文件夹路径为:C3D/model_resule/models/xxx.lan，请注意是整个文件夹而不是文件夹里的.lan文件)，将命令行给出的网站复制到浏览器打开即可看到对应的损失和准确率。</font>
+    查看损失和准确率请在该项目环境的命令行里使用以下命令:tensorboard --logdir 日志文件夹  
+        (日志文件夹路径为:C3D/model_resule/models/xxx.lan，请注意是整个文件夹而不是文件夹里的.lan文件)，将命令行给出的网站复制到浏览器打开即可看到对应的损失和准确率。
 
 #### 3.5. 模型保存
 
@@ -355,9 +355,9 @@ train_model(num_classes, train_dataloader, val_dataloader, test_dataloader, num_
 ```
 - **调用 `train_model` 函数**：开始模型的训练、验证和测试流程。  
 
-<font color="red">当出现</font>**Save model at model_resule/models/C3D_epoch-14.pth.tar**<font color="red">即代表模型训练完成并且已经保存好训练好的模型了，但是到这里脚本还并没有运行完，因为还需要在test数据集上验证测试精度以确保模型没有过拟合</font>
+当出现**Save model at model_resule/models/C3D_epoch-14.pth.tar**即代表模型训练完成并且已经保存好训练好的模型了，但是到这里脚本还并没有运行完，因为还需要在test数据集上验证测试精度以确保模型没有过拟合
 
-<font color="red">当出现</font>**test Acc: 0.9xxxxx**<font color="red"> 时即代表测试集测试完成</font>
+当出现**test Acc: 0.9xxxxx** 时即代表测试集测试完成
 
 ### 至此，模型训练阶段完成
 
@@ -370,10 +370,10 @@ train_model(num_classes, train_dataloader, val_dataloader, test_dataloader, num_
 - **模型保存**：在训练完成后，保存模型的状态字典和优化器的状态字典。
 - **模型测试**：在测试集上评估模型性能，输出测试准确率。
 
-<font color="red" size="5">注意：</font>
-- **<font color="red">3.7.3数据加载的路径是视频处理后的ucf101图片数据集，请注意路径</font>**  
-- **<font color="red">一个batch_size是(1,3,16,112,112)，所以一个batch_size就有16张图片，请根据自己电脑的显存修改batch_size的大小</font>**
-- **<font color="red">如果需要更高的准确率请将num_epochs次数增加，并且适当修改其他超参数，例如学习率lr、批量大小batch_size、动量momentum、权重衰减weight_decay和学习率调度器等</font>**
+## 注意：
+- **3.7.3数据加载的路径是视频处理后的ucf101图片数据集，请注意路径**  
+- **一个batch_size是(1,3,16,112,112)，所以一个batch_size就有16张图片，请根据自己电脑的显存修改batch_size的大小**
+- **如果需要更高的准确率请将num_epochs次数增加，并且适当修改其他超参数，例如学习率lr、批量大小batch_size、动量momentum、权重衰减weight_decay和学习率调度器等**
 
 ## 4、模型推理
 ### inference.ipynb
@@ -491,8 +491,8 @@ train_model(num_classes, train_dataloader, val_dataloader, test_dataloader, num_
     
 ### 至此整个项目结束。
 
-<font color="red" size="5">注意</font>
-<p style="text-indent: 2em;"><font color="red">由于Jupyter notebook本质上是在浏览器中运行的交互式环境，在调用OpenCV的imshow方法时，会出现窗口不会自动关闭的问题，这主要是因为imshow是一个阻塞函数，它需要一个独立的窗口管理，而Jupyter notebook不完全支持这种模式，这里给出几个常见的解决方案：</font><p>
+## 注意
+<p style="text-indent: 2em;">由于Jupyter notebook本质上是在浏览器中运行的交互式环境，在调用OpenCV的imshow方法时，会出现窗口不会自动关闭的问题，这主要是因为imshow是一个阻塞函数，它需要一个独立的窗口管理，而Jupyter notebook不完全支持这种模式，这里给出几个常见的解决方案：<p>
 
 - 1.确保正确释放窗口
 - 2.调整waitKey时间
