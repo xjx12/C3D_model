@@ -18,13 +18,13 @@ tqdm:4.62.3
 <p style="text-indent: 0em;">(1).C3D(根目录):存放项目文件的根目录</p>
 <p style="text-indent: 2em;">(2).data(数据集文件夹)：用于存放数据集</p>
 <p style="text-indent: 4em;">(3).UCF101(原始数据集)：原始视频数据集，需要自行下载，下载地址：https://www.crcv.ucf.edu/research/data-sets/ucf101/</p>
-        <p style="text-indent: 4em;">(3).ucf101(图片数据集文件)：用于存放视频数据集处理后的图片数据集。(**该文件夹需要自己先创建**)</p>
+        <p style="text-indent: 4em;">(3).ucf101(图片数据集文件)：用于存放视频数据集处理后的图片数据集。(该文件夹需要自己先创建)</p>
 <p style="text-indent: 6em;">(4).train(训练集文件夹)：用于存放训练数据(运行data_process.ipynb会自动生成,如果生成失败请自己创建)</p>
 <p style="text-indent: 6em;">(4).test(测试集文件夹)：用于存放测试数据(运行data_process.ipynb会自动生成,如果生成失败请自己创建)</p>
 <p style="text-indent: 6em;">(4).val(验证集文件夹)：用于存放验证数据(运行data_process.ipynb会自动生成,如果生成失败请自己创建)</p>
 <p style="text-indent: 4em;">(3).labels.txt(标签文件)：用于存放视频对应的标签（运行data_process.ipynb会自动生成）</p>
 <p style="text-indent: 4em;">(3).testvideo.avi(推理视频)：用于模型推理，也可以直接用原始数据集中的视频，需要注意模型推理时的推理视频路径</p>
-<p style="text-indent: 2em;">(2).model_resule(日志及训练模型保存文件夹)：用于存放训练日志以及保存训练好的模型以便在模型推测加载训练好的模型(**该文件夹需要自己先创建**)</p>
+<p style="text-indent: 2em;">(2).model_resule(日志及训练模型保存文件夹)：用于存放训练日志以及保存训练好的模型以便在模型推测加载训练好的模型(该文件夹需要自己先创建)</p>
 <p style="text-indent: 4em;">(3).models(日志及训练模型保存文件夹)：用于存放训练日志以及保存训练好的模型以便在模型推测加载训练好的模型(运行train.ipynb文件自动生成)</p>
 <p style="text-indent: 2em;">(2).c3d-pretrained.pth(预训练权重文件)：用于模型训练时预加载的权重，可以让模型更快收敛以及防止过拟合。该文件需要自己下载，注意文件名的一致。</p>
 <p style="text-indent: 2em;">(2).C3D_model.py(C3D模型文件)：C3D模型。</p>
