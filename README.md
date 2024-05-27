@@ -499,4 +499,5 @@ train_model(num_classes, train_dataloader, val_dataloader, test_dataloader, num_
 - 3.使用Jupyter notebook魔法命令
 - 4.更换开发环境，例如使用PyCharm（推荐）
 
-# 编写不易，觉得这个仓库有用的还请各位大佬点个Star，如需协助请联系:xjx12@foxmail.com
+### 能力有限，项目中的不足和错误欢迎各位大佬指正
+### 编写不易，觉得这个仓库有用的还请各位大佬点个Star，如需协助请联系:xjx12@foxmail.com
